@@ -6,7 +6,7 @@ div#board {
     width: 1024px;
     height: 863px;
     margin: auto;
-    background: url("https://i.imgur.com/bLMiTii.jpg");
+    background: url("../images/board.jpg");
 }
 div#messageArea {
     position: absolute;
@@ -39,8 +39,8 @@ form input {
     font-size: 1em;
 }
 .hit {
-    background: url("https://i.imgur.com/rHgVkw8.png") no-repeat center center;
+    background: url("../images/ship.png") no-repeat center center;
 }
 .miss {
-    background: url("https://i.imgur.com/OIA6HvK.png") no-repeat center center;
+    background: url("../images.miss.png") no-repeat center center;
 }
