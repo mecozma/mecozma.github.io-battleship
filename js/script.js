@@ -61,7 +61,17 @@ var model = {
             }
         }
         return true;
-    }
+    },
+    generateShipLocations: function () {
+        var locations;
+        for (var i = 0; i < this.numShips; i++) {
+            do {
+                locations = this.generateShip();
+            } while (this.collision(locations));
+            this.ships[i].locations = locations;
+        }
+    },
+   
 
 };
 // model.fire("53");
@@ -137,16 +147,16 @@ function handleFireButton() {
 function handleKeyPress(e) {
     var fireButton = document.getElementById("fireButton");
     if (e.keyCode === 13) {
-    fireButton.click();
-    return false;
+        fireButton.click();
+        return false;
     }
-    }
+}
 
 window.onload = init;
 function init() {
     var fireButton = document.getElementById("fireButton");
     fireButton.onclick = handleFireButton;
     var guessInput = document.getElementById("guessInput");
-guessInput.onkeypress = handleKeyPress;
+    guessInput.onkeypress = handleKeyPress;
 }
 
