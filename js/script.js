@@ -28,10 +28,18 @@ var model = {
     numShips: 3,
     shipLength: 3,
     shipsSunk: 0,
-    ships: [
-        { locations: ["06", "16", "26"], hits: ["", "", ""] },
-        { locations: ["24", "34", "44"], hits: ["", "", ""] },
-        { locations: ["10", "11", "12"], hits: ["", "", ""] }
+    ships: [{
+            locations: ["06", "16", "26"],
+            hits: ["", "", ""]
+        },
+        {
+            locations: ["24", "34", "44"],
+            hits: ["", "", ""]
+        },
+        {
+            locations: ["10", "11", "12"],
+            hits: ["", "", ""]
+        }
     ],
 
     fire: function (guess) {
@@ -71,7 +79,7 @@ var model = {
             this.ships[i].locations = locations;
         }
     },
-   
+
 
 };
 // model.fire("53");
@@ -153,10 +161,10 @@ function handleKeyPress(e) {
 }
 
 window.onload = init;
+
 function init() {
     var fireButton = document.getElementById("fireButton");
     fireButton.onclick = handleFireButton;
     var guessInput = document.getElementById("guessInput");
     guessInput.onkeypress = handleKeyPress;
 }
-
