@@ -142,7 +142,7 @@ function parseGuess(guess) {
 
 function handleFireButton() {
     var guessInput = document.getElementById("guessInput");
-    var guess = guessInput.value;
+    var guess = guessInput.value.toUpperCase();
     controller.processGuess(guess);
     guessInput.value = "";
 }
